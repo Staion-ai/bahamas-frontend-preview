@@ -44,7 +44,7 @@ const Register = () => {
     return newErrors;
   };
 
-  const formatErrors = (data: any) => {
+  /*const formatErrors = (data: any) => {
     if (!data) return "Unknown error";
     if (typeof data === "object" && !Array.isArray(data)) {
       const messages: string[] = [];
@@ -54,7 +54,28 @@ const Register = () => {
       return messages.join(". ");
     }
     return String(data);
+  };*/
+
+  type ErrorData = null | undefined | { [key: string]: string | string[] } | string;
+
+  const formatErrors = (data: ErrorData) => {
+    if (!data) return "Unknown error";
+
+    if (typeof data === "object" && !Array.isArray(data)) {
+      const messages: string[] = [];
+      for (const key in data) {
+        const value = data[key];
+        messages.push(
+          `${key.replace("_", " ")}: ${Array.isArray(value) ? value.join(", ") : value}`
+        );
+      }
+      return messages.join(". ");
+    }
+
+    return String(data);
   };
+
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
