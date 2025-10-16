@@ -3,8 +3,8 @@ const Contact = () => {
     <>
         <div className="w-[100%] h-[auto] flex flex-col items-center pt-10 bg-cyan-300">
 
-            <h1 className="text-[24px] font-bold text-black text-center">¡You're not alone on this journey!</h1>
-            <h2 className="text-[16px] font-bold text-black text-center">We're here to support you all the way.</h2>
+            <h1 className="text-[24px] font-bold text-black text-center">¡You&apos;re not alone on this journey!</h1>
+            <h2 className="text-[16px] font-bold text-black text-center">We&apos;re here to support you all the way.</h2>
 
             <div className="w-full md:w-[90%] flex flex-col md:flex-row justify-center items-center md:items-start pt-10 mb-5">
                 

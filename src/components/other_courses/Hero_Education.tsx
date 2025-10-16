@@ -12,7 +12,7 @@ const Hero = () => {
                 <span className="inline-block w-[100%] h-[2px] bg-cyan-300
                                 md:w-[100%]"></span>
 
-                <p className="text-[24px] font-bold md:text-32px">"I'm passionate about teaching and sharing knowledge"</p>
+                <p className="text-[24px] font-bold md:text-32px">&quot;I&apos;m passionate about teaching and sharing knowledge&quot;</p>
             </div>
 
             <div className="w-[80%] h-[45%] flex justify-center items-center

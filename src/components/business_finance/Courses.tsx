@@ -68,7 +68,7 @@ const Courses = () => {
                 Training in this area develops practical skills in business analysis, marketing, and corporate finance, while
                 also introducing modern tools such as AI for business. Participants gain the confidence to manage resources,
                 connect with clients, and pursue opportunities in fields ranging from entrepreneurship to investment banking.
-                These abilities strengthen individual employability and support the growth of the Bahama's economy.
+                These abilities strengthen individual employability and support the growth of the Bahama&apos;s economy.
             </p>
             <br />
 
