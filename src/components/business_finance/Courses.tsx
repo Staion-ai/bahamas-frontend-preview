@@ -63,8 +63,8 @@ const Courses = () => {
 
   return (
     <>
-        <div className="w-full h-[auto] flex flex-col items-center pt-10 ">
-            <p className="w-[90%] md:w-[80%] text-justify"> Understanding finance, customers, and communication is key to growing both careers and companies.
+        <div className="w-full h-[auto] flex flex-col items-center pt-10 bg-[#0C1C44]">
+            <p className="w-[90%] md:w-[80%] text-justify text-white"> Understanding finance, customers, and communication is key to growing both careers and companies.
                 Training in this area develops practical skills in business analysis, marketing, and corporate finance, while
                 also introducing modern tools such as AI for business. Participants gain the confidence to manage resources,
                 connect with clients, and pursue opportunities in fields ranging from entrepreneurship to investment banking.
@@ -73,13 +73,13 @@ const Courses = () => {
             <br />
 
             {courses.map((courses, index) => (
-                <div key={index} className="w-[90%] h-[auto] flex flex-col border border-solid border-cyan-400 rounded-[20px] p-3 mb-5 md:mb-10
+                <div key={index} className="w-[90%] h-[auto] flex flex-col text-white border border-solid border-cyan-400 rounded-[20px] p-3 mb-5 md:mb-10
                                             md:w-[85%] md:flex md:flex-row md:p-5 md:gap-10">
 
                     <div className="w-[100%] h-[auto] md:w-[60%] " >
-                        <h1 className="text-[24px] font-bold text-cyan-300"> {courses.course} </h1>
+                        <h1 className="text-[24px] font-bold text-cyan-300"> { courses.course } </h1>
                         <br />
-                        <p className="text-[16px] text-justify">{courses.description}</p>
+                        <p className="text-[16px] text-justify">{ courses.description }</p>
 
                     </div>
 
