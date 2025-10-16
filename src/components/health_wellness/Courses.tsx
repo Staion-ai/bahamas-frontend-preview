@@ -68,7 +68,7 @@ const Courses = () => {
 
                     <div className="w-[100%] h-[auto] pt-3 mb-5 md:w-[20%] md:flex md:flex-col justify-center items-center">
                         <ul className="grid grid-cols-2 md:flex md:flex-col md:gap-2 ">
-                            <li className="flex items-center justify-start gap-2 ">
+                            <li className="flex items-center justify-start gap-2">
                                 <img className="w-[24px] h-[24px]" src="../icons/birrete.png" alt="" />
                                 <span className="text-[12px]"> {courses.provider} </span>
                             </li>
