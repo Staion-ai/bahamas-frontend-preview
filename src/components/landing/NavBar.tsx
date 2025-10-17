@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function NavBar() {
     
@@ -73,14 +74,14 @@ export default function NavBar() {
                     max-[1170px]:flex-col max-[1170px]:bg-white max-[1170px]:border-b max-[1170px]:border-gray-300 
                     max-[1170px]:shadow-md max-[1170px]:overflow-hidden
                     max-[1170px]:transition-all max-[1170px]:duration-500 max-[1170px]:ease-in-out
-                    ${open ? "max-[1170px]:max-h-[400px] opacity-100" : "max-[1170px]:max-h-0 opacity-0"}
+                    ${open ? "max-[1170px]:max-h-[400px] max-[1170px]:opacity-100" : "max-[1170px]:max-h-0 max-[1170px]:opacity-0"}
                 `}
                 >
                     {[
-                        { label: "About Us", href: "" },
-                        { label: "Training Program", href: "" },
-                        { label: "FAQs", href: "" },
-                        { label: "Apply Now", href: "" },
+                        { label: "About Us", href: "#about" },
+                        { label: "Training Program", href: "#training" },
+                        { label: "FAQs", href: "#faqs" },
+                        { label: "Apply Now", href: "/register" },
                     ].map((item) => (
                         <li
                         key={item.label}
@@ -89,19 +90,19 @@ export default function NavBar() {
                             max-[1170px]:justify-center max-[1170px]:px-5 max-[1170px]:py-2
                         "
                         >
-                        <a
-                            href={item.href}
-                            onClick={() => setOpen(false)}
-                            className="
-                            no-underline text-black font-semibold text-[20px] 
-                            px-2 py-4 w-full text-center border-2 border-black rounded-full
-                            transition-colors duration-300
-                            hover:bg-cyan-300
-                            max-[1170px]:text-center
-                            "
-                        >
-                            {item.label}
-                        </a>
+                            <Link
+                                href={item.href}
+                                onClick={() => setOpen(false)}
+                                className="
+                                no-underline text-black font-semibold text-[20px] 
+                                px-1.5 m-1 py-3 w-full text-center border-2 border-black rounded-full
+                                transition-colors duration-300
+                                hover:bg-[#47F4FA]
+                                max-[1170px]:text-center
+                                "
+                            >
+                                {item.label}
+                            </Link>
                         </li>
                     ))}
                 </ul>

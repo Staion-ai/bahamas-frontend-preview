@@ -3,15 +3,20 @@ import React from "react";
 
 const Journey = () => {
     return (
+        <>
         <section
-            className="bg-cyan-400 text-black 
-                py-[80px] px-[20px] lg:py-16 lg:px-[40px] 
+            className="relative bg-[#47F4FA] text-black 
+                py-[80px] px-[20px] lg:py-16 lg:px-[40px]
+                after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[20px]
+                after:bg-gradient-to-b after:from-[#47F4FA] after:to-transparent
+                shadow-[0_25px_45px_rgba(0,0,0,0.25)]
+                z-10
             "
         >
-            <h3 className="text-2xl lg:text-3xl font-extrabold text-center">
+            <h3 className="text-[34px] md:text-[50px] font-extrabold text-center">
                 You’re not alone on this journey!
             </h3>
-            <p className="text-lg lg:text-xl font-semibold text-center mt-2">
+            <p className="text-[20px] font-semibold text-center">
                 We’re here to support you all the way
             </p>
 
@@ -30,7 +35,7 @@ const Journey = () => {
                         <img src="iconChatbot.png" alt="Chatbot" className="w-14 lg:w-16" />
                         <p className="text-2xl font-extrabold">ChatBot</p>
                     </div>
-                    <p className="text-base lg:text-lg leading-relaxed">
+                    <p className="text-[20px] leading-relaxed">
                         Available 24/7 to answer your most common questions.
                     </p>
                 </div>
@@ -45,8 +50,8 @@ const Journey = () => {
             <img src="iconEmail.png" alt="Email" className="w-10 lg:w-12" />
             <p className="text-2xl font-extrabold">Email</p>
         </div>
-        <p className="text-base lg:text-lg leading-relaxed">
-            <span className="font-extrabold">support@upskillbahamas.com</span>{" "}
+        <p className="text-[20px] leading-relaxed">
+            <span className="font-extrabold">support@upskillbahamas.com<br/></span>{" "}
             Write to us anytime, and our team will be happy to assist.
         </p>
         </div>
@@ -57,13 +62,14 @@ const Journey = () => {
             <img src="iconWhatsapp.png" alt="Whatsapp" className="w-10 lg:w-12" />
             <p className="text-2xl font-extrabold">Whatsapp</p>
         </div>
-        <p className="text-base lg:text-lg leading-relaxed">
+        <p className="text-[20px] leading-relaxed">
             <span className="font-extrabold">Number</span> <br />
             Send us a message for quick, personal support.
         </p>
         </div>
     </div>
     </section>
+    </>
     );
 };
 

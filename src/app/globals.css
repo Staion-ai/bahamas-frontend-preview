@@ -33,3 +33,7 @@ body {
 .animate-stepIn {
   animation: stepIn 0.7s ease-out forwards;
 }
+
+html {
+  scroll-behavior: smooth;
+}

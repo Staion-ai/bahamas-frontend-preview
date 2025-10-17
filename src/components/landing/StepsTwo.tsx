@@ -13,7 +13,7 @@ const StepsTwo = () => {
         >
             <div
                 className="
-                flex-1 text-base leading-relaxed 
+                flex-1 text-[20px] leading-relaxed 
                 p-5 md:p-8 
                 border-b md:border-b-0 md:border-r border-black
                 "
@@ -31,7 +31,7 @@ const StepsTwo = () => {
             <div
                 className="
                 flex-1 text-base leading-relaxed 
-                p-5 md:p-8 
+                p-5 md:p-8 text-[20px]
                 border-b md:border-b-0 md:border-r border-black
                 "
             >
@@ -43,7 +43,7 @@ const StepsTwo = () => {
             <div
                 className="
                 flex-1 text-base leading-relaxed 
-                p-5 md:p-8
+                p-5 md:p-8 text-[20px]
                 "
             >
                 No matter which option you choose, you’ll gain skills that open doors to

@@ -18,16 +18,16 @@ const Footer = () => {
             <div className="footer-right flex flex-col lg:flex-row gap-[8px] lg:gap-20 w-full lg:w-auto">
                 {/* Left Nav */}
                 <div className="flex flex-col lg:flex-col justify-between space-y-2 lg:space-y-0">
-                    <a href="#" className="text-black text-[20px] font-semibold">Home</a>
-                    <a href="#" className="text-black text-[20px] font-semibold">About us</a>
-                    <a href="#" className="text-black text-[20px] font-semibold">Training Programs</a>
+                    <a href="#" className="text-black text-[20px] underline font-semibold">Home</a>
+                    <a href="#" className="text-black text-[20px] underline font-semibold">About us</a>
+                    <a href="#" className="text-black text-[20px] underline font-semibold">Training Programs</a>
                 </div>
 
                 {/* Right Nav */}
                 <div className="flex flex-col lg:flex-col justify-between space-y-2 lg:space-y-0">
-                    <a href="#" className="text-black text-[20px] font-semibold">FAQs</a>
-                    <a href="#" className="text-black text-[20px] font-semibold">Contact</a>
-                    <a href="#" className="text-black text-[20px] font-semibold">Privacy Policy</a>
+                    <a href="#" className="text-black text-[20px] underline font-semibold">FAQs</a>
+                    <a href="#" className="text-black text-[20px] underline font-semibold">Contact</a>
+                    <a href="#" className="text-black text-[20px] underline font-semibold">Privacy Policy</a>
                 </div>
             </div>
         </footer>
