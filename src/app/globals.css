@@ -12,20 +12,13 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background-color: #1A1A1A;
   color: var(--foreground);
   font-family: "Alan Sans", sans-serif;
 }
 
-/*ANIMACIONES*/
+/* ANIMACIONES */
 @keyframes stepIn {
   0% {
     opacity: 0;
@@ -39,4 +32,8 @@ body {
 
 .animate-stepIn {
   animation: stepIn 0.7s ease-out forwards;
+}
+
+html {
+  scroll-behavior: smooth;
 }

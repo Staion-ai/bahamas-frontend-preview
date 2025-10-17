@@ -47,12 +47,13 @@ const Faqs: React.FC = () => {
     };
 
     return (
-        <section className="max-w-6xl mx-auto px-5 md:px-20 py-14">
-            <h3 className="text-center text-3xl md:text-4xl font-extrabold text-white mb-10">
+        <>
+        <section id="faqs" className="max-w-6xl mx-auto px-5 md:px-20 py-14">
+            <h3 className="text-center text-[34px] md:text-[50px] font-bold text-white mb-10">
                 Frequently Asked Questions
             </h3>
 
-            <div className="flex flex-col gap-4 bg-[#282828] border border-cyan-400 rounded-2xl p-6 md:p-14">
+            <div className="flex flex-col gap-4 bg-[#3a3555] border border-cyan-400 rounded-2xl p-6 md:p-14">
                 {faqs.map((faq, index) => (
                     <div key={index} className="overflow-hidden">
                         {/* Botón */}
@@ -60,11 +61,10 @@ const Faqs: React.FC = () => {
                             onClick={() => toggleFAQ(index)}
                             className={`
                                 w-full text-left text-white font-semibold 
-                                text-base md:text-lg 
-                                bg-[#282828] border border-white rounded-2xl 
+                                text-base text-[20px] 
+                                bg-[#3a3555] border border-white rounded-2xl 
                                 px-6 py-4 flex justify-between items-center
                                 transition-all duration-300
-                                hover:bg-cyan-400 hover:text-black
                             `}
                             aria-expanded={activeIndex === index}
                         >
@@ -76,7 +76,7 @@ const Faqs: React.FC = () => {
 
                         {/* Contenido expandible */}
                         <div
-                            className={`px-6 text-white text-sm md:text-base leading-relaxed transition-all duration-500 ease-in-out ${
+                            className={`px-6 text-white text-[20px] leading-relaxed transition-all duration-500 ease-in-out ${
                                 activeIndex === index
                                 ? "max-h-96 py-4 opacity-100"
                                 : "max-h-0 opacity-0 py-0"
@@ -88,6 +88,20 @@ const Faqs: React.FC = () => {
                 ))}
             </div>
         </section>
+        <div className="w-full h-[40px] md:h-[50px] flex flex-row">
+            <div className="w-[10%] h-full bg-[#47F4FA] relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-full h-full bg-[#0C1C44] rounded-bl-full"></div>
+            </div>
+            
+            <div className="w-[80%] h-full bg-[#0C1C44]">
+
+            </div>
+
+            <div className="w-[10%] h-full bg-[#47F4FA] relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-full bg-[#0C1C44] rounded-br-full"></div>
+            </div>
+        </div>
+        </>
     );
 };
 
