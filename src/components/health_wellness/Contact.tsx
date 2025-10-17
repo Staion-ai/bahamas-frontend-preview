@@ -1,5 +1,4 @@
 const Contact = () => {
-
     return (
       <>
           <div className="w-[100%] h-[auto] flex flex-col items-center pt-10 bg-[#47F4FA]">
@@ -63,4 +62,5 @@ const Contact = () => {
   }
   
   export default Contact
+
 

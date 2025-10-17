@@ -11,9 +11,9 @@ const Hero = () => {
 
                 <span className="inline-block w-[100%] h-[2px] bg-cyan-300
                                 md:w-[100%]"></span>
-
-
+              
                 <p className="text-[28px] font-bold md:text-32px">&quot;I&apos;m passionate about creating experiences for others&quot;</p>
+
             </div>
 
             <div className="w-[80%] h-[45%] flex justify-center items-center

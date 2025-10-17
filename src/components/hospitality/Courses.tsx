@@ -107,7 +107,7 @@ const Courses = () => {
             <p className="w-[90%] md:w-[80%] text-white text-[20px]"> Tourism is the engine that drives our economy, and it requires the best service and hospitality.
                                 Training equips individuals with the skills to deliver world-class service, and it embodies the spirit of The Bahamas.
                                 It also creates real careers by sustaining local businesses, which in turn keeps the industry generating jobs and dollars.
-                                It's a great future for people who develop their skills, allowing them to thrive in this industry.
+                                It&apos;s a great future for people who develop their skills, allowing them to thrive in this industry.
             </p>
             <br />
  

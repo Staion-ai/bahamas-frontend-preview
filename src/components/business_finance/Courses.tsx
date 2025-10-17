@@ -65,17 +65,17 @@ const Courses = () => {
     <>
         <div className="w-full h-[auto] flex flex-col items-center pt-10 bg-[#0C1C44]">
             <p className="w-[90%] md:w-[80%] text-white text-[20px]"> Understanding finance, customers, and communication is key to growing both careers and companies.
+
                 Training in this area develops practical skills in business analysis, marketing, and corporate finance, while
                 also introducing modern tools such as AI for business. Participants gain the confidence to manage resources,
                 connect with clients, and pursue opportunities in fields ranging from entrepreneurship to investment banking.
-                These abilities strengthen individual employability and support the growth of the Bahama's economy.
+                These abilities strengthen individual employability and support the growth of the Bahama&apos;s economy.
             </p>
             <br />
 
             {courses.map((courses, index) => (
-                <div key={index} className="w-[90%] h-[auto] flex flex-col border border-solid border-cyan-400 rounded-[20px] p-3 mb-5 md:mb-10
+                <div key={index} className="w-[90%] h-[auto] flex flex-col text-white border border-solid border-cyan-400 rounded-[20px] p-3 mb-5 md:mb-10
                                             md:w-[85%] md:flex md:flex-row md:p-5 md:gap-10">
-
 
                     <div className="w-[100%] h-[auto] md:w-[50%] " >
                         <h1 className="text-[28px] font-bold text-cyan-300"> { courses.course } </h1>

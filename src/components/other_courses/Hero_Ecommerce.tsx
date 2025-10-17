@@ -14,6 +14,7 @@ const Hero = () => {
 
 
                 <p className="text-[28px] font-bold md:text-32px">&quot;I want to grow my business online and master digital marketing&quot;</p>
+
             </div>
 
             <div className="w-[80%] h-[45%] flex justify-center items-center
