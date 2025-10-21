@@ -25,8 +25,6 @@ export default function AdminListPage() {
     try {
       setLoading(true);
       const data = await apiClient.getAdmins(currentPage, search);
-      
-      // data es directamente un array
       setAdmins(data);
       setTotalPages(Math.ceil(data.length / 10));
     } catch (error) {
@@ -37,8 +35,6 @@ export default function AdminListPage() {
       setLoading(false);
     }
   };
-
-
 
   const handleDeleteClick = (id: number) => {
     setSelectedId(id);

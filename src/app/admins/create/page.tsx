@@ -50,8 +50,8 @@ export default function CreateAdminPage() {
     <>
     <div className="container mx-auto px-4 py-8 max-w-2xl bg-white">
       <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-        <div className="bg-blue-600 text-white px-6 py-4">
-          <h2 className="text-2xl font-bold">Crear Nuevo Administrador</h2>
+        <div className="bg-[#0C1C44] text-white px-6 py-4">
+          <h2 className="text-2xl font-bold">Create New Administrator</h2>
         </div>
 
         <div className="p-6">
@@ -69,14 +69,14 @@ export default function CreateAdminPage() {
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Usuario
+                Username
               </label>
               <input
                 type="text"
                 name="admin_username"
                 value={formData.admin_username}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#0C1C44]"
                 required
               />
               {errors.admin_username && (
@@ -86,14 +86,14 @@ export default function CreateAdminPage() {
 
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Contraseña
+                Password
               </label>
               <input
                 type="password"
                 name="admin_password"
                 value={formData.admin_password}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#0C1C44]"
                 required
               />
               {errors.admin_password && (
@@ -103,14 +103,14 @@ export default function CreateAdminPage() {
 
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Confirmar Contraseña
+               Confirm Password
               </label>
               <input
                 type="password"
                 name="admin_password_confirm"
                 value={formData.admin_password_confirm}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#0C1C44]"
                 required
               />
               {errors.admin_password_confirm && (
@@ -120,14 +120,14 @@ export default function CreateAdminPage() {
 
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Correo Electrónico
+                Email
               </label>
               <input
                 type="email"
                 name="admin_email"
                 value={formData.admin_email}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#0C1C44]"
                 required
               />
               {errors.admin_email && (
@@ -137,14 +137,14 @@ export default function CreateAdminPage() {
 
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Nombre
+                Name
               </label>
               <input
                 type="text"
                 name="admin_name"
                 value={formData.admin_name}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#0C1C44]"
                 required
               />
               {errors.admin_name && (
@@ -154,14 +154,14 @@ export default function CreateAdminPage() {
 
             <div className="mb-6">
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Apellido
+                Last name
               </label>
               <input
                 type="text"
                 name="admin_last_name"
                 value={formData.admin_last_name}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#0C1C44]"
                 required
               />
               {errors.admin_last_name && (
@@ -174,7 +174,7 @@ export default function CreateAdminPage() {
                 href="/admins"
                 className="px-6 py-2 border border-gray-300 rounded hover:bg-gray-100 transition"
               >
-                Cancelar
+                Cancel
               </Link>
               <button
                 type="submit"
