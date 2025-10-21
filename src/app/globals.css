@@ -13,6 +13,7 @@
 }
 
 body {
+  /* background-color: #1A1A1A; */
   background-color: #0C1C44;
   color: var(--foreground);
   font-family: "Alan Sans", sans-serif;
@@ -36,4 +37,8 @@ html {
 
 .animate-stepIn {
   animation: stepIn 0.7s ease-out forwards;
+}
+
+html {
+  scroll-behavior: smooth;
 }
