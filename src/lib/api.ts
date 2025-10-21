@@ -32,12 +32,12 @@ class ApiClient {
 
   // ===================== CRUD Admins =====================
 
-  async getAdmins(page = 1, search = ''): Promise<PaginatedResponse<Admin>> {
+  async getAdmins(page = 1, search = ''): Promise<Admin[]> {
     const params = new URLSearchParams();
     if (page > 1) params.append('page', page.toString());
     if (search) params.append('search', search);
     const query = params.toString() ? `?${params.toString()}` : '';
-    return this.request<PaginatedResponse<Admin>>(`/admins/${query}`);
+    return this.request<Admin[]>(`/admins/${query}`);
   }
 
   async getAdmin(id: number): Promise<Admin> {

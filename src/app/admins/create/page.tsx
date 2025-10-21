@@ -34,12 +34,24 @@ export default function CreateAdminPage() {
     e.preventDefault();
     setErrors({});
     setLoading(true);
-
+  
     try {
       await apiClient.createAdmin(formData);
       router.push('/admins');
-    } catch (error: any) {
-      const errorData = JSON.parse(error.message);
+    } catch (error: unknown) {
+      // Manejo seguro de errores
+      let errorData: Record<string, string> = {};
+  
+      if (error instanceof Error) {
+        try {
+          errorData = JSON.parse(error.message);
+        } catch {
+          errorData = { detail: error.message };
+        }
+      } else {
+        errorData = { detail: 'Ocurrió un error desconocido.' };
+      }
+  
       setErrors(errorData);
     } finally {
       setLoading(false);
