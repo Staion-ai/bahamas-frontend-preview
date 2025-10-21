@@ -129,7 +129,7 @@ export default function CreateAdminPage() {
                 <p className="text-red-500 text-sm mt-1">{errors.admin_password_confirm}</p>
               )}
             </div>
-
+ 
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Email
