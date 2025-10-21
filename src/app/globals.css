@@ -13,7 +13,7 @@
 }
 
 body {
-  background-color: #1A1A1A;
+  /* background-color: #1A1A1A; */
   color: var(--foreground);
   font-family: "Alan Sans", sans-serif;
 }
