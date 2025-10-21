@@ -18,17 +18,17 @@ return (
 
       {/* Texto */}
       <div className="flex-1 flex flex-col justify-between h-full">
-        <h2 className="text-[36px] mb-14 font-[800]">
+        <h2 className="text-[34px] md:text-[50px] mb-[20px] font-[800]">
           Choose Your Future
         </h2>
 
-        <p className="text-base mb-5">
+        <p className="text-[20px] mb-5">
           Discover a wide range of opportunities designed for Bahamians like you. 
           From technology and business to hospitality and personal growth, 
           there’s a course for every passion and career path.
         </p>
 
-        <p className="text-base mb-5">
+        <p className="text-[20px] mb-5">
           Instead of scrolling through endless options,{" "}
           <span className="font-bold">
             start by choosing the statement that reflects the future you want to build.
@@ -38,7 +38,7 @@ return (
         <a
           href=""
           className="
-            bg-[#feee50] text-black hover:border-1 hover:border-black rounded-full
+            bg-[#FFFF43] text-[20px] text-black hover:border-1 hover:border-black rounded-full
             px-6 py-3 text-center text-base font-[600]
             transition-colors duration-300 hover:bg-yellow-300
             w-full
