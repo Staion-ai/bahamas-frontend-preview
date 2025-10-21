@@ -34,12 +34,24 @@ export default function CreateAdminPage() {
     e.preventDefault();
     setErrors({});
     setLoading(true);
-
+  
     try {
       await apiClient.createAdmin(formData);
       router.push('/admins');
-    } catch (error: any) {
-      const errorData = JSON.parse(error.message);
+    } catch (error: unknown) {
+      // Manejo seguro de errores
+      let errorData: Record<string, string> = {};
+  
+      if (error instanceof Error) {
+        try {
+          errorData = JSON.parse(error.message);
+        } catch {
+          errorData = { detail: error.message };
+        }
+      } else {
+        errorData = { detail: 'Ocurrió un error desconocido.' };
+      }
+  
       setErrors(errorData);
     } finally {
       setLoading(false);
@@ -117,7 +129,7 @@ export default function CreateAdminPage() {
                 <p className="text-red-500 text-sm mt-1">{errors.admin_password_confirm}</p>
               )}
             </div>
-
+ 
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Email
