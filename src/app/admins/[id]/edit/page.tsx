@@ -115,7 +115,7 @@ export default function EditAdminPage() {
                 name="admin_username"
                 value={formData.admin_username}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#0C1C44]"
                 required
               />
               {errors.admin_username && (
@@ -132,7 +132,7 @@ export default function EditAdminPage() {
                 name="admin_email"
                 value={formData.admin_email}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#0C1C44]"
                 required
               />
               {errors.admin_email && (
@@ -149,7 +149,7 @@ export default function EditAdminPage() {
                 name="admin_name"
                 value={formData.admin_name}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#0C1C44]"
                 required
               />
               {errors.admin_name && (
@@ -166,7 +166,7 @@ export default function EditAdminPage() {
                 name="admin_last_name"
                 value={formData.admin_last_name}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#0C1C44]"
                 required
               />
               {errors.admin_last_name && (
@@ -190,8 +190,8 @@ export default function EditAdminPage() {
                 name="new_password"
                 value={formData.new_password}
                 onChange={handleChange}
-                placeholder="Dejar en blanco para no cambiar"
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Leave blank to not change"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#0C1C44]"
               />
               {errors.new_password && (
                 <p className="text-red-500 text-sm mt-1">{errors.new_password}</p>
@@ -207,7 +207,7 @@ export default function EditAdminPage() {
                 name="confirm_password"
                 value={formData.confirm_password}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#0C1C44]"
               />
               {errors.confirm_password && (
                 <p className="text-red-500 text-sm mt-1">{errors.confirm_password}</p>

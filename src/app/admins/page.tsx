@@ -25,10 +25,12 @@ export default function AdminListPage() {
     try {
       setLoading(true);
       const data = await apiClient.getAdmins(currentPage, search);
-      setAdmins(data.results);
-      setTotalPages(Math.ceil(data.count / 10));
+      setAdmins(data);
+      setTotalPages(Math.ceil(data.length / 10));
     } catch (error) {
       console.error('Error loading admins:', error);
+      setAdmins([]);
+      setTotalPages(1);
     } finally {
       setLoading(false);
     }
