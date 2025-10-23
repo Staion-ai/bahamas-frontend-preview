@@ -24,7 +24,10 @@ export default function NavBar() {
   const handleActionClick = (e: React.MouseEvent) => {
     e.preventDefault();
     if (token) {
-      router.push("/courses"); // si está logueado
+      const element = document.getElementById('training');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     } else {
       router.push("/auth/login"); // si no lo está
     }
