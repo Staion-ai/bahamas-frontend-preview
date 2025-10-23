@@ -24,9 +24,9 @@ export default function AdminListPage() {
   const loadAdmins = async () => {
     try {
       setLoading(true);
-      const data = await apiClient.getAdmins(currentPage, search);
+      const data = await apiClient.getAdmins(currentPage, search); // Admin[]
       setAdmins(data);
-      setTotalPages(Math.ceil(data.length / 10));
+      setTotalPages(Math.ceil(data.length / 10)); // si paginas en frontend
     } catch (error) {
       console.error('Error loading admins:', error);
       setAdmins([]);

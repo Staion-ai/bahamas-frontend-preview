@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import Link from 'next/link';
 import { apiClient } from '@/lib/api';
-import { Admin, AdminUpdate } from '@/types/admins/adminTypes';
+import { AdminUpdate } from '@/types/admins/adminTypes';
 
 export default function EditAdminPage() {
   const router = useRouter();
@@ -14,6 +14,7 @@ export default function EditAdminPage() {
   const [loading, setLoading] = useState(false);
   const [fetching, setFetching] = useState(true);
   const [errors, setErrors] = useState<Record<string, string>>({});
+
   const [formData, setFormData] = useState<AdminUpdate>({
     admin_username: '',
     admin_email: '',
@@ -61,8 +62,8 @@ export default function EditAdminPage() {
     setLoading(true);
 
     try {
-      // Si no se proporcionó contraseña, no enviarla
-      const updateData = { ...formData };
+      // Preparar datos para actualizar
+      const updateData: AdminUpdate = { ...formData };
       if (!updateData.new_password) {
         delete updateData.new_password;
         delete updateData.confirm_password;
@@ -70,8 +71,19 @@ export default function EditAdminPage() {
 
       await apiClient.updateAdmin(id, updateData);
       router.push('/admins');
-    } catch (error: any) {
-      const errorData = JSON.parse(error.message);
+    } catch (error: unknown) {
+      let errorData: Partial<Record<keyof AdminUpdate | 'detail', string>> = {};
+
+      if (error instanceof Error) {
+        try {
+          errorData = JSON.parse(error.message);
+        } catch {
+          errorData = { detail: error.message };
+        }
+      } else {
+        errorData = { detail: 'Ocurrió un error desconocido.' };
+      }
+
       setErrors(errorData);
     } finally {
       setLoading(false);
