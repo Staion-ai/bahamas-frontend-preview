@@ -11,6 +11,8 @@ export default function LoginPage() {
   const [message, setMessage] = useState("");
   const router = useRouter();
 
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
   // Este es para los inputs
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -22,7 +24,7 @@ export default function LoginPage() {
     setMessage("");
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/dj-rest-auth/login/", {
+      const res = await fetch(`${API_URL}/dj-rest-auth/login/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

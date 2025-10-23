@@ -19,6 +19,8 @@ export default function RegisterPage() {
     const [message, setMessage] = useState("");
     const router = useRouter();
 
+    const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
         setErrors((prev) => ({ ...prev, [e.target.name]: "" }));
@@ -47,7 +49,7 @@ export default function RegisterPage() {
         }
 
         try {
-            const res = await fetch("http://127.0.0.1:8000/dj-rest-auth/registration/", {
+            const res = await fetch(`${API_URL}/dj-rest-auth/registration/`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
